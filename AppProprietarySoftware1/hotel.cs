@@ -9,14 +9,15 @@ namespace AppProprietarySoftware1
     public class Hotel
     {
         public Habitacion[,] Habitaciones { get; set; }
-        public Dictionary<int, Reservacion> Reservaciones { get; private set; }
+        public Dictionary<int, Reservacion> Reservaciones { get; set; }
         public Hotel()
         {
-            inicializeRooms();
+            Reservaciones = new Dictionary<int, Reservacion>();
+            InicializeRooms();
         }
 
 
-        private void inicializeRooms()
+        private void InicializeRooms()
         {
             Habitaciones = new Habitacion[5, 10];
 

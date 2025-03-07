@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AppProprietarySoftware1
 {
-    internal class Reservacion
+    public class Reservacion
     {
         public Cliente Cliente { get; set; }
         public Habitacion Habitacion { get; set; }
