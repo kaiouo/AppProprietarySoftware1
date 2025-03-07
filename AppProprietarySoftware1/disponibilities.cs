@@ -22,8 +22,7 @@ namespace AppProprietarySoftware1
         }
 
         private void Cargarhabitaciones()
-        {
-           
+        {           
             RoomsdataGridView.Columns.Add("Numero", "Numero");
             RoomsdataGridView.Columns.Add("Tipo", "Tipo");
             RoomsdataGridView.Columns.Add("Precio", "Precio");
