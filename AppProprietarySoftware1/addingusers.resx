@@ -121,7 +121,7 @@
   <data name="home.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
-        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAACxcAAAsXAf9nGwoAAAAHdElNRQfpAwYQEDIBZyVHAAAA
+        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAACxUAAAsVAYCZ2IMAAAAHdElNRQfpAwYQEDIBZyVHAAAA
         GXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAyZJREFUaEPtmkvIDWEch8c110RhYUdR
         ZMGOIkSxQslCKCEbt9jIV2IlUkiUJDaKhMJKykIsSWEhsUDu90vuPL/T/E9jmm/eOXPOzLxH51dPfWea
         me995p3zXv7fFxSUXrAc7sJv+AOPYQsMhLZIT1gP70ACUb7BXvBeRhIb4RNY4+/DbfgZfv4F+8FbmSSJ
@@ -139,4 +139,7 @@
         TYLgL3e+F50rIcmWAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="erpError.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>55, 10</value>
+  </metadata>
 </root>

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addingusers));
             home = new Button();
             label1 = new Label();
@@ -38,6 +39,9 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
+            erpError = new ErrorProvider(components);
+            clean = new Button();
+            ((System.ComponentModel.ISupportInitialize)erpError).BeginInit();
             SuspendLayout();
             // 
             // home
@@ -63,7 +67,7 @@
             // 
             // adddata
             // 
-            adddata.Location = new Point(181, 387);
+            adddata.Location = new Point(179, 342);
             adddata.Name = "adddata";
             adddata.Size = new Size(148, 38);
             adddata.TabIndex = 2;
@@ -73,21 +77,21 @@
             // 
             // name
             // 
-            name.Location = new Point(194, 140);
+            name.Location = new Point(202, 127);
             name.Name = "name";
             name.Size = new Size(394, 27);
             name.TabIndex = 3;
             // 
             // dui
             // 
-            dui.Location = new Point(374, 206);
+            dui.Location = new Point(382, 194);
             dui.Name = "dui";
             dui.Size = new Size(214, 27);
             dui.TabIndex = 4;
             // 
             // phonenumber
             // 
-            phonenumber.Location = new Point(295, 284);
+            phonenumber.Location = new Point(303, 267);
             phonenumber.Name = "phonenumber";
             phonenumber.Size = new Size(293, 27);
             phonenumber.TabIndex = 5;
@@ -96,7 +100,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(61, 139);
+            label2.Location = new Point(61, 128);
             label2.Name = "label2";
             label2.Size = new Size(94, 26);
             label2.TabIndex = 6;
@@ -107,7 +111,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(61, 207);
+            label3.Location = new Point(61, 193);
             label3.Name = "label3";
             label3.Size = new Size(315, 26);
             label3.TabIndex = 7;
@@ -117,12 +121,26 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(61, 283);
+            label4.Location = new Point(61, 266);
             label4.Name = "label4";
             label4.Size = new Size(204, 26);
             label4.TabIndex = 8;
             label4.Text = "Numero de telefono:";
             label4.Click += label4_Click;
+            // 
+            // erpError
+            // 
+            erpError.ContainerControl = this;
+            // 
+            // clean
+            // 
+            clean.Location = new Point(382, 342);
+            clean.Name = "clean";
+            clean.Size = new Size(148, 36);
+            clean.TabIndex = 9;
+            clean.Text = "Limpiar";
+            clean.UseVisualStyleBackColor = true;
+            clean.Click += clean_Click;
             // 
             // addingusers
             // 
@@ -130,6 +148,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.InactiveCaption;
             ClientSize = new Size(800, 450);
+            Controls.Add(clean);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -142,6 +161,7 @@
             Name = "addingusers";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "addingusers";
+            ((System.ComponentModel.ISupportInitialize)erpError).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -157,5 +177,7 @@
         private Label label2;
         private Label label3;
         private Label label4;
+        private ErrorProvider erpError;
+        private Button clean;
     }
 }

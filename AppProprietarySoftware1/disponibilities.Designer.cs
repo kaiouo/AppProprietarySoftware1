@@ -30,33 +30,48 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(disponibilities));
             home = new Button();
+            RoomsdataGridView = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)RoomsdataGridView).BeginInit();
             SuspendLayout();
             // 
             // home
             // 
             home.BackgroundImage = (Image)resources.GetObject("home.BackgroundImage");
             home.BackgroundImageLayout = ImageLayout.Center;
-            home.Location = new Point(670, 43);
+            home.Location = new Point(723, 12);
             home.Name = "home";
             home.Size = new Size(74, 72);
             home.TabIndex = 1;
             home.UseVisualStyleBackColor = true;
             home.Click += home_Click;
             // 
+            // RoomsdataGridView
+            // 
+            RoomsdataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            RoomsdataGridView.Location = new Point(12, 21);
+            RoomsdataGridView.Name = "RoomsdataGridView";
+            RoomsdataGridView.RowHeadersWidth = 51;
+            RoomsdataGridView.Size = new Size(705, 417);
+            RoomsdataGridView.TabIndex = 2;
+            RoomsdataGridView.CellContentClick += dataGridView1_CellContentClick;
+            // 
             // disponibilities
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(RoomsdataGridView);
             Controls.Add(home);
             Name = "disponibilities";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "disponibilities";
+            ((System.ComponentModel.ISupportInitialize)RoomsdataGridView).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Button home;
+        private DataGridView RoomsdataGridView;
     }
 }

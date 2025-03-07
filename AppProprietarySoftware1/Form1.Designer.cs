@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             adduser = new Button();
             disponibility = new Button();
-            booking = new Button();
             currents = new Button();
             pictureBox1 = new PictureBox();
             label1 = new Label();
@@ -51,27 +50,17 @@
             // disponibility
             // 
             disponibility.Image = (Image)resources.GetObject("disponibility.Image");
-            disponibility.Location = new Point(267, 294);
+            disponibility.Location = new Point(364, 291);
             disponibility.Name = "disponibility";
             disponibility.Size = new Size(79, 77);
             disponibility.TabIndex = 1;
             disponibility.UseVisualStyleBackColor = true;
             disponibility.Click += disponibility_Click;
             // 
-            // booking
-            // 
-            booking.Image = (Image)resources.GetObject("booking.Image");
-            booking.Location = new Point(457, 294);
-            booking.Name = "booking";
-            booking.Size = new Size(76, 77);
-            booking.TabIndex = 2;
-            booking.UseVisualStyleBackColor = true;
-            booking.Click += booking_Click;
-            // 
             // currents
             // 
             currents.Image = (Image)resources.GetObject("currents.Image");
-            currents.Location = new Point(642, 297);
+            currents.Location = new Point(642, 294);
             currents.Name = "currents";
             currents.Size = new Size(76, 74);
             currents.TabIndex = 3;
@@ -107,12 +96,12 @@
             Controls.Add(label1);
             Controls.Add(pictureBox1);
             Controls.Add(currents);
-            Controls.Add(booking);
             Controls.Add(disponibility);
             Controls.Add(adduser);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -122,7 +111,6 @@
 
         private Button adduser;
         private Button disponibility;
-        private Button booking;
         private Button currents;
         private PictureBox pictureBox1;
         private Label label1;

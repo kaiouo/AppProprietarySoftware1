@@ -12,9 +12,16 @@ namespace AppProprietarySoftware1
 {
     public partial class newbookings : Form
     {
-        public newbookings()
+        private Hotel hotel;
+        private Habitacion habitacion;
+        public newbookings(Hotel hotel, Habitacion habitacion)
         {
             InitializeComponent();
+            this.hotel = hotel;
+            this.habitacion = habitacion;
+
+            habitacionselecionada.Text = habitacion.Numero.ToString() + " " + habitacion.Tipo + " " + habitacion.Numero.ToString();
+
         }
 
         private void home_Click(object sender, EventArgs e)
@@ -35,6 +42,16 @@ namespace AppProprietarySoftware1
                 mainForm.Show();
             }
             this.Close();
+        }
+
+        private void newbookings_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
