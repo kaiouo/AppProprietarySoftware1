@@ -14,10 +14,14 @@ namespace AppProprietarySoftware1
     public partial class disponibilities : Form
     {
         private Hotel hotel;
-        public disponibilities(Hotel hotel)
+        private List<Cliente> clientes;
+        private Dictionary<int, Reservacion>reservaciones;
+        public disponibilities(Hotel hotel, List<Cliente>clientes, Dictionary<int, Reservacion>reservaciones)
         {
             InitializeComponent();
             this.hotel = hotel;
+            this.clientes = clientes;
+            this.reservaciones = reservaciones;
             Cargarhabitaciones();
         }
 
@@ -32,6 +36,7 @@ namespace AppProprietarySoftware1
 
 
             DataGridViewButtonColumn btnReservar = new DataGridViewButtonColumn();
+            btnReservar.Name = "Accion";
             btnReservar.HeaderText = "Acción";
             btnReservar.Text = "Reservar";
             btnReservar.UseColumnTextForButtonValue = true;
@@ -60,7 +65,7 @@ namespace AppProprietarySoftware1
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == RoomsdataGridView.Columns["Acción"].Index && e.RowIndex >= 0)
+            if (e.ColumnIndex == RoomsdataGridView.Columns["Accion"].Index && e.RowIndex >= 0)
             {   
                 //obtener numero
                 int numeroHabitacion = Convert.ToInt32(RoomsdataGridView.Rows[e.RowIndex].Cells["Numero"].Value);
@@ -82,7 +87,7 @@ namespace AppProprietarySoftware1
                 // Abrir form para hacer la reserva
                 if (habitacionSeleccionada != null && habitacionSeleccionada.Disponible)
                 {
-                    newbookings formReserva = new newbookings(hotel, habitacionSeleccionada);
+                    newbookings formReserva = new newbookings(hotel, habitacionSeleccionada, clientes, reservaciones);
                     formReserva.ShowDialog();
                 }
                 else

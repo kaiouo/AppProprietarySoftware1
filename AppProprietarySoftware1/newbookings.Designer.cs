@@ -38,6 +38,9 @@
             addreservation = new Button();
             total = new Label();
             pagoTotal = new Label();
+            numeronoches = new Label();
+            label3 = new Label();
+            clientList = new ComboBox();
             SuspendLayout();
             // 
             // home
@@ -55,7 +58,7 @@
             // 
             habitacionselecionada.AutoSize = true;
             habitacionselecionada.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            habitacionselecionada.Location = new Point(25, 63);
+            habitacionselecionada.Location = new Point(28, 63);
             habitacionselecionada.Name = "habitacionselecionada";
             habitacionselecionada.Size = new Size(249, 26);
             habitacionselecionada.TabIndex = 1;
@@ -63,23 +66,24 @@
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(25, 215);
+            dateTimePicker1.Location = new Point(26, 237);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(295, 27);
             dateTimePicker1.TabIndex = 2;
             // 
             // dateTimePicker2
             // 
-            dateTimePicker2.Location = new Point(361, 215);
+            dateTimePicker2.Location = new Point(361, 237);
             dateTimePicker2.Name = "dateTimePicker2";
             dateTimePicker2.Size = new Size(292, 27);
             dateTimePicker2.TabIndex = 3;
+            dateTimePicker2.ValueChanged += dateTimePicker2_ValueChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(25, 166);
+            label1.Location = new Point(26, 186);
             label1.Name = "label1";
             label1.Size = new Size(153, 26);
             label1.TabIndex = 4;
@@ -89,7 +93,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(361, 166);
+            label2.Location = new Point(361, 186);
             label2.Name = "label2";
             label2.Size = new Size(127, 26);
             label2.TabIndex = 5;
@@ -97,18 +101,19 @@
             // 
             // addreservation
             // 
-            addreservation.Location = new Point(202, 356);
+            addreservation.Location = new Point(318, 394);
             addreservation.Name = "addreservation";
             addreservation.Size = new Size(133, 44);
             addreservation.TabIndex = 6;
             addreservation.Text = "Reservar";
             addreservation.UseVisualStyleBackColor = true;
+            addreservation.Click += addreservation_Click;
             // 
             // total
             // 
             total.AutoSize = true;
             total.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            total.Location = new Point(47, 293);
+            total.Location = new Point(26, 347);
             total.Name = "total";
             total.Size = new Size(152, 26);
             total.TabIndex = 7;
@@ -118,17 +123,50 @@
             // 
             pagoTotal.AutoSize = true;
             pagoTotal.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            pagoTotal.Location = new Point(216, 293);
+            pagoTotal.Location = new Point(186, 347);
             pagoTotal.Name = "pagoTotal";
             pagoTotal.Size = new Size(23, 26);
             pagoTotal.TabIndex = 8;
             pagoTotal.Text = "$";
+            // 
+            // numeronoches
+            // 
+            numeronoches.AutoSize = true;
+            numeronoches.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            numeronoches.Location = new Point(216, 300);
+            numeronoches.Name = "numeronoches";
+            numeronoches.Size = new Size(40, 26);
+            numeronoches.TabIndex = 9;
+            numeronoches.Text = "dia";
+            numeronoches.Click += dias_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(26, 300);
+            label3.Name = "label3";
+            label3.Size = new Size(184, 26);
+            label3.TabIndex = 10;
+            label3.Text = "Noches a reservar:";
+            // 
+            // clientList
+            // 
+            clientList.FormattingEnabled = true;
+            clientList.Location = new Point(28, 119);
+            clientList.Name = "clientList";
+            clientList.Size = new Size(151, 28);
+            clientList.TabIndex = 11;
+            clientList.SelectedIndexChanged += clientList_SelectedIndexChanged;
             // 
             // newbookings
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(clientList);
+            Controls.Add(label3);
+            Controls.Add(numeronoches);
             Controls.Add(pagoTotal);
             Controls.Add(total);
             Controls.Add(addreservation);
@@ -157,5 +195,8 @@
         private Button addreservation;
         private Label total;
         private Label pagoTotal;
+        private Label numeronoches;
+        private Label label3;
+        private ComboBox clientList;
     }
 }

@@ -10,16 +10,16 @@ namespace AppProprietarySoftware1
     {
         public Cliente Cliente { get; set; }
         public Habitacion Habitacion { get; set; }
-        public DateTime FechaInicio { get; set; }
-        public DateTime FechaFin { get; set; }
-     
+        public int Dias { get; set; }
+        public decimal MontoTotal { get; set; }
 
-        public Reservacion(Cliente cliente, Habitacion habitacion, DateTime fechaInicio, DateTime fechaFin)
+
+        public Reservacion(Cliente cliente, Habitacion habitacion, int dias, decimal montoTotal)
         {
             Cliente = cliente;
             Habitacion = habitacion;
-            FechaInicio = fechaInicio;
-            FechaFin = fechaFin;
+            Dias = dias;
+            MontoTotal = montoTotal;
         }
     }
 }

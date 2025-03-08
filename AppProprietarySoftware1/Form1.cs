@@ -6,14 +6,17 @@ namespace AppProprietarySoftware1
 
         //lista de usuarios
         List<Cliente> usuarios = new List<Cliente>();
-        
+        //diccionario
+        private Dictionary<int, Reservacion> reservaciones;
         //instancia de las habitaciones
         private Hotel hotel;
+
 
         public Form1()
         {
             InitializeComponent();
             hotel = new Hotel();
+            reservaciones = new Dictionary<int, Reservacion>(); //iniciar diccionario 
 
         }
 
@@ -34,21 +37,19 @@ namespace AppProprietarySoftware1
 
         private void disponibility_Click(object sender, EventArgs e)
         {
-            disponibilities dis = new disponibilities(hotel);
+            disponibilities dis = new disponibilities(hotel,usuarios,reservaciones);
             dis.Show();
             this.Hide();
         }
 
         private void booking_Click(object sender, EventArgs e)
         {
-            newbookings newbooks = new newbookings();
-            newbooks.Show();
-            this.Hide();
+           
         }
 
         private void currents_Click(object sender, EventArgs e)
         {
-            currentbookings currents = new currentbookings();
+            currentbookings currents = new currentbookings(hotel, usuarios, reservaciones);
             currents.Show();
             this.Hide();
 
