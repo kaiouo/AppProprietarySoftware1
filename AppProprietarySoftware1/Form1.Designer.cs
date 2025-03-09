@@ -34,13 +34,14 @@
             currents = new Button();
             pictureBox1 = new PictureBox();
             label1 = new Label();
+            grafics = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // adduser
             // 
             adduser.Image = (Image)resources.GetObject("adduser.Image");
-            adduser.Location = new Point(80, 294);
+            adduser.Location = new Point(80, 291);
             adduser.Name = "adduser";
             adduser.Size = new Size(79, 77);
             adduser.TabIndex = 0;
@@ -50,7 +51,7 @@
             // disponibility
             // 
             disponibility.Image = (Image)resources.GetObject("disponibility.Image");
-            disponibility.Location = new Point(364, 291);
+            disponibility.Location = new Point(282, 294);
             disponibility.Name = "disponibility";
             disponibility.Size = new Size(79, 77);
             disponibility.TabIndex = 1;
@@ -60,7 +61,7 @@
             // currents
             // 
             currents.Image = (Image)resources.GetObject("currents.Image");
-            currents.Location = new Point(642, 294);
+            currents.Location = new Point(642, 297);
             currents.Name = "currents";
             currents.Size = new Size(76, 74);
             currents.TabIndex = 3;
@@ -87,12 +88,23 @@
             label1.TabIndex = 7;
             label1.Text = "Bienvenido";
             // 
+            // grafics
+            // 
+            grafics.Image = (Image)resources.GetObject("grafics.Image");
+            grafics.Location = new Point(458, 294);
+            grafics.Name = "grafics";
+            grafics.Size = new Size(79, 77);
+            grafics.TabIndex = 8;
+            grafics.UseVisualStyleBackColor = true;
+            grafics.Click += grafics_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(800, 450);
+            Controls.Add(grafics);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
             Controls.Add(currents);
@@ -114,5 +126,6 @@
         private Button currents;
         private PictureBox pictureBox1;
         private Label label1;
+        private Button grafics;
     }
 }

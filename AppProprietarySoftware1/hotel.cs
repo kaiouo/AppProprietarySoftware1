@@ -34,6 +34,24 @@ namespace AppProprietarySoftware1
 
             }
         }
+
+        public string getTipoHabitacionNumero(int numeroHabitacion)
+        {
+
+            for (int piso = 0; piso < 5; piso++)
+            {
+                for (int habitacion = 0; habitacion < 10; habitacion++)
+                {
+                    if (Habitaciones[piso, habitacion].Numero == numeroHabitacion)
+                    {
+                        return Habitaciones[piso, habitacion].Tipo;
+                    }
+                }
+            }
+            return "desconocido";
+        }
+
+
         private string getTipoHabitacion(int piso, int habitacion)
         {
             if (piso == 0) { return "sencilla"; }

@@ -46,12 +46,16 @@ namespace AppProprietarySoftware1
 
         private void adddata_Click(object sender, EventArgs e)
         {
+            //se valida primero si los datos estan ingresados
             if (validateData())
             {
                 //crear el objeto que se enviara a la lista
                 Cliente nuevousuario = new Cliente(name.Text, dui.Text, phonenumber.Text);
                 usuarios.Add(nuevousuario);
                 MessageBox.Show("Nuevo usuario agregado correctamente");
+                name.Text = string.Empty;
+                dui.Text = string.Empty;
+                phonenumber.Text = string.Empty;
             }
 
 
@@ -96,8 +100,10 @@ namespace AppProprietarySoftware1
             return isValid;
         }
 
+        //funcion para limpiar los txt
         private void clean_Click(object sender, EventArgs e)
         {
+
             name.Text = string.Empty;
             dui.Text = string.Empty;
             phonenumber.Text = string.Empty;

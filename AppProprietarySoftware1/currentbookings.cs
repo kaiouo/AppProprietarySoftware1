@@ -24,6 +24,7 @@ namespace AppProprietarySoftware1
             cargarReservaciones();
         }
 
+        //funcion que llama al diccionario a un datagrid
         public void cargarReservaciones()
         {
             currentReservations.Columns.Add("habNum", "Numero de habitacion");
@@ -62,6 +63,7 @@ namespace AppProprietarySoftware1
 
         }
 
+        //funcion para cancelar reservaciones
         private void currentReservations_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == currentReservations.Columns["cancelar"].Index && e.RowIndex >= 0)

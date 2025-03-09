@@ -35,6 +35,7 @@ namespace AppProprietarySoftware1
             clientsComboBox();
         }
 
+        //funcion que agrega datos al combobox, tomandolos de la lista
         private void clientsComboBox()
         {
                 clientList.Items.Clear();
@@ -75,12 +76,15 @@ namespace AppProprietarySoftware1
 
         }
 
+        //al elegir fecha final comienza a calcular el monto a cancelar llamando a dicha funcion
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
         {
             fechaFin = dateTimePicker2.Value.Date;
 
             CalcularMonto();
         }
+
+        //se calcula el monto por noche
         public void CalcularMonto()
         {
 
@@ -102,6 +106,7 @@ namespace AppProprietarySoftware1
 
         }
 
+        //boton que activa funcion para agregar la reservacion al diccionario
         private void addreservation_Click(object sender, EventArgs e)
         {   
             //tomando el nombre del comboBox

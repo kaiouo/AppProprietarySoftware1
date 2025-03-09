@@ -2,7 +2,7 @@ namespace AppProprietarySoftware1
 {
     public partial class Form1 : Form
     {
-        
+
 
         //lista de usuarios
         List<Cliente> usuarios = new List<Cliente>();
@@ -20,7 +20,7 @@ namespace AppProprietarySoftware1
 
         }
 
-       
+
 
         private void adduser_Click(object sender, EventArgs e)
         {
@@ -37,14 +37,14 @@ namespace AppProprietarySoftware1
 
         private void disponibility_Click(object sender, EventArgs e)
         {
-            disponibilities dis = new disponibilities(hotel,usuarios,reservaciones);
+            disponibilities dis = new disponibilities(hotel, usuarios, reservaciones);
             dis.Show();
             this.Hide();
         }
 
         private void booking_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void currents_Click(object sender, EventArgs e)
@@ -58,6 +58,13 @@ namespace AppProprietarySoftware1
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void grafics_Click(object sender, EventArgs e)
+        {
+            Grafico graficos = new Grafico(hotel, usuarios, reservaciones);
+            graficos.Show();
+            this.Hide();
         }
     }
 }

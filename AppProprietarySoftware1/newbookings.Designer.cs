@@ -135,9 +135,9 @@
             numeronoches.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             numeronoches.Location = new Point(216, 300);
             numeronoches.Name = "numeronoches";
-            numeronoches.Size = new Size(40, 26);
+            numeronoches.Size = new Size(23, 26);
             numeronoches.TabIndex = 9;
-            numeronoches.Text = "dia";
+            numeronoches.Text = "1";
             numeronoches.Click += dias_Click;
             // 
             // label3
